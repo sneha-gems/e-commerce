@@ -1,0 +1,15 @@
+.nav_box {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: center;
+  background-color: rgb(165 209 231);
+  list-style: none;
+  height: 70px;
+  box-sizing: border-box;
+  margin: 0px;
+}
+
+.nav_item {
+  margin: 10px;
+}

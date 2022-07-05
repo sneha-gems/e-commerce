@@ -1,0 +1,28 @@
+.box {
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-color: rgb(165 209 231);
+  width: 100%;
+  list-style: none;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+.item {
+  margin: 3px;
+}
+
+.contact {
+  list-style: none;
+}
+
+.social {
+  list-style: none;
+  padding-left: 27px;
+}
