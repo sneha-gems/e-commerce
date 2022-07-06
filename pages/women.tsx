@@ -4,6 +4,7 @@ import Card from "../components/Card"
 import Footer from "../components/Footer"
 import HeadCom from "../components/HeadCom"
 import Navbar from "../components/Navbar"
+import styles from '../styles/pages/women.module.css'
 
 type props = {
     props: {data: any}
@@ -31,11 +32,13 @@ const Women:NextPage = ({data}: any) => {
     <>
     <HeadCom title="women" />
     <Navbar/>
+    <div className={styles.grid}>
     {womenCloth && womenCloth.map((item: any, index: number) => {
         return(<>
         <Card data={item} key={index}/>
         </>)
     })}
+    </div>
     <Footer/>
     </>
     )

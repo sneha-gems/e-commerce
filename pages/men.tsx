@@ -1,6 +1,7 @@
 import { NextPage } from "next"
 
 import Card from "../components/Card"
+import Container from "../components/Container"
 import Footer from "../components/Footer"
 import HeadCom from "../components/HeadCom"
 import Navbar from "../components/Navbar"
@@ -30,11 +31,13 @@ const Men:NextPage = ({data}: any) => {
     <>
     <HeadCom title="women" />
     <Navbar/>
+    <Container>
     {womenCloth && womenCloth.map((item: any, index: number) => {
         return(<>
         <Card data={item} key={index}/>
         </>)
     })}
+    </Container>
     <Footer/>
     </>
     )

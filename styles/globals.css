@@ -14,3 +14,13 @@ a {
 * {
   box-sizing: border-box;
 }
+
+button {
+  width: inherit;
+}
+
+p {
+  word-break: break-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

@@ -10,6 +10,20 @@
   margin: 0px;
 }
 
+.nav_list {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: center;
+  list-style: none;
+}
+
 .nav_item {
   margin: 10px;
+}
+
+.cart {
+  position: absolute;
+  top: 25px;
+  right: 70px;
 }
