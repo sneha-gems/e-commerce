@@ -1,47 +1,17 @@
 import { NextPage } from "next"
-import Card from "../components/Card"
-import Container from "../components/Container"
 
 import Footer from "../components/Footer"
 import HeadCom from "../components/HeadCom"
 import Navbar from "../components/Navbar"
+import { filterData } from "../utils/common"
+import Card from "../components/Card"
+import Container from "../components/Container"
+import PageView from "../components/PageView"
 
-type props = {
-    props: {data: any}
-}
-
-export const getStaticProps = async(): Promise<props> => {
-    const res = await fetch("https://fakestoreapi.com/products").then((res) => res.json()).catch((err) => console.log(err))
-
-    return {
-        props: {
-            data: res
-        }
-    }
-
-}
-
-const Women:NextPage = ({data}: any) => {
-    const womenCloth: Array<{}> = []
-    data.map((item: any) => {
-        if(item?.category === "electronics"){
-            womenCloth.push(item)
-        }
-    })
+const Gadgets:NextPage = () => {
     return(
-    <>
-    <HeadCom title="women" />
-    <Navbar/>
-    <Container>
-    {womenCloth && womenCloth.map((item: any, index: number) => {
-        return(<>
-        <Card data={item} key={index}/>
-        </>)
-    })}
-    </Container>
-    <Footer/>
-    </>
+    <PageView title="GADGETS" category="electronics" />
     )
 }
 
-export default Women
+export default Gadgets
