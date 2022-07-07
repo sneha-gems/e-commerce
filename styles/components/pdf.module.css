@@ -1,0 +1,9 @@
+.pdf {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-item: center;
+}
+.text {
+  align-item: center;
+}
